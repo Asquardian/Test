@@ -1,0 +1,90 @@
+.company_row{
+    display: grid;
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+    border-color: #C7C7C7;
+    height: 62px;
+    grid-template-columns: auto 3fr 3fr 2fr 2fr 42px 2fr;
+    align-items: center;
+}
+
+.company_label{
+    display: grid;
+    grid-template-columns: 39px 120px 7fr;
+    align-items: center;
+}
+
+.company_img{
+    height: 100%;
+}
+
+.company_button{
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    padding: 0;
+}
+
+.company_button.active img{
+    transform: rotate(90deg);
+    transition: 0.5s;
+}
+
+.company_info{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.company_city, .company_name{
+    line-height: 21px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.company_name{
+    color: #F25627;
+    text-decoration: underline;
+}
+
+.price::after{
+    content: ' ₽';
+}
+
+.company_item{
+    font-size: 14px;
+}
+
+
+.company_city{
+    color: #8E8E8E;
+}
+
+.logo{
+    width: 90px;
+}
+
+.shipping{
+    display: grid;
+    height: 100%;
+}
+
+.shipping .price{
+    align-self: end;
+}
+
+.shipping::after{
+    content: '';
+    display: block;
+    height: 5px;
+    border-radius: 3px 3px 0px 0px;
+    width: 113px;
+    align-self: end;
+}
+
+.green::after{
+    background-color: #6CA695;
+}
+
+.yellow::after{
+    background-color: #FFD964;
+}

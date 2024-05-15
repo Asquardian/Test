@@ -1,0 +1,22 @@
+.delivery{
+  width: 75%;
+  padding: 41px 51px 51px 51px;
+  border-radius: 20px;
+  background-color: white;
+  margin: 10%;
+  
+}
+
+.company_header{
+  display: grid;
+  background-color: #C7C7C7;
+  border-radius: 5px;
+  grid-template-columns: 159px 3fr 3fr 2fr 2fr 42px 2fr;
+  padding: 20px 0 20px 0;
+  margin-bottom: 11px;
+}
+
+.company_header .item:first-child{
+  grid-column-start: 2;
+}
+
