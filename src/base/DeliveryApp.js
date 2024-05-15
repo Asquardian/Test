@@ -4,9 +4,10 @@ import GlobalError from "./ErrorStatement/GlobalError";
 import Company from "./Company/Company";
 
 class DeliveryApp extends React.Component {
-  constructor() {
-    super();
-    this.state = { hasError: false, companies: [] };
+  state = { hasError: false, companies: [] };
+
+  constructor(props) {
+    super(props);
     this.getData();
   }
 
@@ -27,10 +28,9 @@ class DeliveryApp extends React.Component {
     let companyList = [];
     console.log(typeof this.state.companies);
     for (let item of this.state.companies) {
-      companyList.push(
-        <Company data={item.info}>
-        </Company>
-      );
+      companyList.push(<Company data={item.info}>
+        
+      </Company>);
     }
     return companyList;
   }

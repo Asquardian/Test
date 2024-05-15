@@ -18,18 +18,6 @@
     height: 100%;
 }
 
-.company_button{
-    background-color: transparent;
-    border: none;
-    height: 100%;
-    padding: 0;
-}
-
-.company_button.active img{
-    transform: rotate(90deg);
-    transition: 0.5s;
-}
-
 .company_info{
     display: grid;
     grid-template-rows: 1fr 1fr;
