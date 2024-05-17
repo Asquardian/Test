@@ -14,12 +14,15 @@ class Company extends React.Component {
     return "";
   }
 
-  state = { showChildren: "" };
+  state = { compnay_class: "" };
 
   toggle(statement) {
-    if (statement) this.setState({ showChildren: "" });
-    else this.setState({ showChildren: this.props.children });
-    console.log(statement);
+    if (statement){
+      this.setState({compnay_class: "active"});
+      return true;
+    }
+    this.setState({compnay_class: ""});
+    return false;
   }
 
   render() {
@@ -67,9 +70,9 @@ class Company extends React.Component {
             <Progress value="{this.props.data.progress}" />
           </div>
         </div>
-
-        {this.state.showChildren}
-        
+        <div className={"company_more " + this.state.compnay_class}>
+          {this.props.children}
+          </div>
       </div>
     );
   }

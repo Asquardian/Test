@@ -1,78 +1,99 @@
-.company_row{
+.company_row {
+  display: grid;
+  border-width: 1px 0px 1px 0px;
+  border-style: solid;
+  border-color: #c7c7c7;
+  height: 62px;
+  grid-template-columns: auto 3fr 3fr 2fr 2fr 42px 2fr;
+  align-items: center;
+}
+
+.company_label {
+  display: grid;
+  grid-template-columns: 39px 120px 7fr;
+  align-items: center;
+}
+
+.company_img {
+  height: 100%;
+}
+
+.company_info {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.company_city,
+.company_name {
+  line-height: 21px;
+  margin: 0;
+  font-size: 14px;
+}
+
+.company_name {
+  color: #f25627;
+  text-decoration: underline;
+}
+
+.price::after {
+  content: " ₽";
+}
+
+.company_item {
+  font-size: 14px;
+}
+
+.company_city {
+  color: #8e8e8e;
+}
+
+.logo {
+  width: 90px;
+}
+
+.shipping {
+  display: grid;
+  height: 100%;
+}
+
+.shipping .price {
+  align-self: end;
+}
+
+.shipping::after {
+  content: "";
+  display: block;
+  height: 5px;
+  border-radius: 3px 3px 0px 0px;
+  width: 113px;
+  align-self: end;
+}
+
+.green::after {
+  background-color: #6ca695;
+}
+
+.yellow::after {
+  background-color: #ffd964;
+}
+
+.company_more {
+  row-gap: 7px;
+  background-color: #f5f6f8;
+  height: 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.company_more:not(.active) * {
+    display: none;
+  }
+
+.company_more.active{
+    border: 1px solid #eff0f4;
+    height: auto;
     display: grid;
-    border-width: 1px 0px 1px 0px;
-    border-style: solid;
-    border-color: #C7C7C7;
-    height: 62px;
-    grid-template-columns: auto 3fr 3fr 2fr 2fr 42px 2fr;
-    align-items: center;
-}
-
-.company_label{
-    display: grid;
-    grid-template-columns: 39px 120px 7fr;
-    align-items: center;
-}
-
-.company_img{
-    height: 100%;
-}
-
-.company_info{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-}
-
-.company_city, .company_name{
-    line-height: 21px;
-    margin: 0;
-    font-size: 14px;
-}
-
-.company_name{
-    color: #F25627;
-    text-decoration: underline;
-}
-
-.price::after{
-    content: ' ₽';
-}
-
-.company_item{
-    font-size: 14px;
+    padding: 7px 27px 20px 27px;
 }
 
 
-.company_city{
-    color: #8E8E8E;
-}
-
-.logo{
-    width: 90px;
-}
-
-.shipping{
-    display: grid;
-    height: 100%;
-}
-
-.shipping .price{
-    align-self: end;
-}
-
-.shipping::after{
-    content: '';
-    display: block;
-    height: 5px;
-    border-radius: 3px 3px 0px 0px;
-    width: 113px;
-    align-self: end;
-}
-
-.green::after{
-    background-color: #6CA695;
-}
-
-.yellow::after{
-    background-color: #FFD964;
-}

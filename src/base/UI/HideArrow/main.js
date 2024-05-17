@@ -22,7 +22,6 @@ class HideArrow extends React.Component {
         className={
           this.state.buttonClicked ? "arrow_button active" : "arrow_button"
         }
-        type="button"
         aria-label="Открыть"
       >
         <img src={Arrow} alt="Открыть" />

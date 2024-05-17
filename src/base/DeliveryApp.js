@@ -2,12 +2,12 @@ import "./style.css";
 import React from "react";
 import GlobalError from "./ErrorStatement/GlobalError";
 import Company from "./Company/Company";
+import DeliveryStatus from "./DeliveryStatus/DeliveryStatus";
 
 class DeliveryApp extends React.Component {
   state = { hasError: false, companies: [] };
 
-  constructor(props) {
-    super(props);
+  componentDidMount() {
     this.getData();
   }
 
@@ -28,8 +28,8 @@ class DeliveryApp extends React.Component {
     let companyList = [];
     console.log(typeof this.state.companies);
     for (let item of this.state.companies) {
-      companyList.push(<Company data={item.info}>
-        
+      companyList.push(<Company data={item.info} key={item.id}>
+          <DeliveryStatus data={item.delivery}  key={item.delivery_id}/> 
       </Company>);
     }
     return companyList;

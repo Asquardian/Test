@@ -1,6 +1,7 @@
 {
     "companies": [
         {
+            "id": 0,
             "info": {
                 "name": "ООО Koyo",
                 "city": "Санкт-Петербург",

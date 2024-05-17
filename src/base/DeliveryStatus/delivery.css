@@ -1,0 +1,35 @@
+.delivery_row{
+    display: grid;
+    grid-template-columns: 60px 0.8fr  0.7fr repeat(5, 1fr);
+    align-items: center;
+    height: 62px;
+    font-size: 14px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.delivery_status::before{
+    content: '';
+    display: block;
+    width: 17px;
+    height: 17px;
+    border-radius: 17px;
+}
+
+.delivered::before{
+    background-color: #6CA695;
+}
+
+.delivery_status{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 5fr;
+}
+
+.tracking{
+    line-height: 21px;
+}
+
+.delivery_item_label{
+    color: #505050;
+}
