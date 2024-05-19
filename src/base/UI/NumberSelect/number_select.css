@@ -1,0 +1,15 @@
+.input_double{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.input_double *:first-child{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input_double select{
+    margin-left: -3px;
+    background-color: white;
+    padding: 12px 5px 12px 5px;
+}

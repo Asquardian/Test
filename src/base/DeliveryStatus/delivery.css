@@ -11,6 +11,7 @@
 .delivery_status::before{
     content: '';
     display: block;
+    background-color: #FFD964;
     width: 17px;
     height: 17px;
     border-radius: 17px;

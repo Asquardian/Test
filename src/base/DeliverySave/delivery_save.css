@@ -1,0 +1,5 @@
+.delivery_grid{
+    text-align: center;
+    grid-template-columns: 2fr repeat(4, 1fr);
+    margin-top: 40px;
+}

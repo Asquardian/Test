@@ -7,7 +7,7 @@ import DeliveryStatus from "./DeliveryStatus/DeliveryStatus";
 class DeliveryApp extends React.Component {
   state = { hasError: false, companies: [] };
 
-  componentDidMount() {
+  componentWillMount() {
     this.getData();
   }
 
@@ -26,10 +26,16 @@ class DeliveryApp extends React.Component {
 
   makeCompany() {
     let companyList = [];
-    console.log(typeof this.state.companies);
     for (let item of this.state.companies) {
-      companyList.push(<Company data={item.info} key={item.id}>
-          <DeliveryStatus data={item.delivery}  key={item.delivery_id}/> 
+      let deliveryList = [];
+      for (let item_delivery of item.delivery) {
+        deliveryList.push(
+          <DeliveryStatus data={item_delivery} key={item_delivery.id} />
+        );
+      }
+      console.log(item.product);
+      companyList.push(<Company data={item.info} key={item.id} product={item.product}> 
+        {deliveryList} 
       </Company>);
     }
     return companyList;

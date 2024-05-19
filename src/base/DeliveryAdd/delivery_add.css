@@ -1,0 +1,57 @@
+.delivery_form {
+  background-color: white;
+  padding: 40px 30px 40px 30px;
+  border-radius: 20px;
+  margin-top: 45px;
+}
+
+.form_container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 39px;
+  row-gap: 20px;
+}
+
+.input {
+  padding: 12px 0px 12px 6px;
+  border-radius: 5px;
+  border: 1px solid #c7c7c7;
+  width: 100%;
+  font-family: "Manrope", sans-serif;
+}
+
+.span-2{
+    grid-column: span 2;
+}
+
+.span-3{
+    grid-column: span 3;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.input::-webkit-calendar-picker-indicator {
+  background: url("calendar.svg") 96% / 21px no-repeat;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+select.input {
+  padding: 12px 63px 12px 21px;
+  appearance: none;
+  -webkit-appearance: none;
+  background: url("arrow_select.svg") 96% / 8px no-repeat;
+  transition: 0.3s;
+}
+
+.input:focus {
+  border: 1px solid #a0a0a0;
+  outline: none;
+}
+
+.input_container {
+  display: grid;
+}

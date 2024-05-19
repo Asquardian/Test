@@ -2,6 +2,7 @@ import React from "react";
 import "./company.css";
 import Progress from "../UI/Progress/main";
 import HideArrow from "../UI/HideArrow/main";
+import DeliveryAdd from "../DeliveryAdd/DeliveryAdd";
 
 class Company extends React.Component {
   setColor(progress) {
@@ -17,11 +18,12 @@ class Company extends React.Component {
   state = { compnay_class: "" };
 
   toggle(statement) {
-    if (statement){
-      this.setState({compnay_class: "active"});
+    console.log(statement);
+    if (statement) {
+      this.setState({ compnay_class: "active" });
       return true;
     }
-    this.setState({compnay_class: ""});
+    this.setState({ compnay_class: "" });
     return false;
   }
 
@@ -72,7 +74,8 @@ class Company extends React.Component {
         </div>
         <div className={"company_more " + this.state.compnay_class}>
           {this.props.children}
-          </div>
+          <DeliveryAdd product={this.props.product}></DeliveryAdd>
+        </div>
       </div>
     );
   }

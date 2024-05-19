@@ -1,19 +1,88 @@
 {
-    "companies": [
+  "companies": [
+    {
+      "id": 0,
+      "info": {
+        "name": "ООО Koyo",
+        "city": "Санкт-Петербург",
+        "img": "/img/Koyo.png",
+        "price": 12000000000,
+        "shipping": 12000000000,
+        "remain": 0,
+        "progress": 100
+      },
+      "product": [
         {
-            "id": 0,
-            "info": {
-                "name": "ООО Koyo",
-                "city": "Санкт-Петербург",
-                "img": "/img/Koyo.png",
-                "price": 12000000000,
-                "shipping": 12000000000,
-                "remain": 0,
-                "progress": 100
-            },
-            "product": {
-                "name": "text"
-            }
+          "img": "/img/product.jpg",
+          "name": "text",
+          "id": 0,
+          "price": 10000000000,
+          "left": 10
         }
-    ]
+      ],
+      "delivery": [
+        {
+          "id": 0,
+          "status": "Доставлен",
+          "date": "12.02.2023",
+          "tracking": "3485638756",
+          "width": "90x90x90 mm",
+          "weight": "100 kg",
+          "status_paid": "Оплачена"
+        },
+
+        {
+          "id": 1,
+          "status": "В пути",
+          "date": "12.02.2023",
+          "tracking": "3485638756",
+          "width": "90x90x90 mm",
+          "weight": "100 kg",
+          "status_paid": "Оплачена"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "info": {
+        "name": "ООО Koyo",
+        "city": "Санкт-Петербург",
+        "img": "/img/Koyo.png",
+        "price": 12000000000,
+        "shipping": 12000000000,
+        "remain": 0,
+        "progress": 100
+      },
+      "product": [
+        {
+          "img": "/img/product.jpg",
+          "name": "text1",
+          "id": 1,
+          "price": 10000000000,
+          "left": 10
+        }
+      ],
+      "delivery": [
+        {
+          "id": 3,
+          "status": "Доставлен",
+          "date": "12.02.2024",
+          "tracking": "3485638756",
+          "width": "90x90x90 mm",
+          "weight": "100 kg",
+          "status_paid": "Оплачена"
+        },
+
+        {
+          "id": 4,
+          "status": "В пути",
+          "date": "12.02.2024",
+          "tracking": "3485638756",
+          "width": "90x90x90 mm",
+          "weight": "100 kg",
+          "status_paid": "Оплачена"
+        }
+      ]
+    }
+  ]
 }

@@ -6,13 +6,21 @@ class HideArrow extends React.Component {
     
   state = { buttonClicked: false };
 
-  buttonClick() {
+  toogle(){
     if (this.state.buttonClicked) {
       this.setState({ buttonClicked: false });
     } else {
       this.setState({ buttonClicked: true });
     }
+  }
+
+  async buttonClick() {
+    await this.toogle();
     this.props.handleEvent(this.state.buttonClicked);
+  }
+
+  constructor(){
+    super();
   }
 
   render() {

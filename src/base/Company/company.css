@@ -80,9 +80,10 @@
 .company_more {
   row-gap: 7px;
   background-color: #f5f6f8;
-  height: 0;
+  max-height: 0;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+  transition: 0.5s cubic-bezier(0, 1, 0, 1);
 }
 
 .company_more:not(.active) * {
@@ -91,7 +92,7 @@
 
 .company_more.active{
     border: 1px solid #eff0f4;
-    height: auto;
+    max-height: max-content;
     display: grid;
     padding: 7px 27px 20px 27px;
 }
