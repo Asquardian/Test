@@ -62,7 +62,6 @@ class Company extends React.Component {
       tracking: e.values.tracking,
       url: e.values.url,
     };
-    console.log(object);
     this.state.changed = object;
   }
 
