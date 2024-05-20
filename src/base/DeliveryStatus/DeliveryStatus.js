@@ -53,6 +53,19 @@ class DeliveryStatus extends React.Component {
     return total;
   }
 
+  format(date){
+    let arr = date.split('-');
+    let total = "";
+    for(let i = arr.length -1;i >= 0; i--){
+      total += arr[i];
+      if(0 !== i){
+        total += '.';
+      }
+    }
+    return total;
+  }
+  
+
   render() {
     return (
       <div className="delivery_row">
@@ -61,7 +74,7 @@ class DeliveryStatus extends React.Component {
         <div className={"delivery_status " + this.state.additional_class}>
           {this.props.data.status}
         </div>
-        <div className="delivery_date">{this.props.data.date}</div>
+        <div className="delivery_date">{this.format(this.props.data.date)}</div>
         <div className="delivery_tracking">
           <div className="delivery_item_label">Трекинг номер</div>
           <a className="delivery_item_value" href={this.props.data.url}>

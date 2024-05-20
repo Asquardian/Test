@@ -6,10 +6,13 @@ import HideArrow from "../UI/HideArrow/main";
 import DeliveryAdd from "../DeliveryAdd/DeliveryAdd";
 import DeliveryStatus from "../DeliveryStatus/DeliveryStatus";
 
+
+
 class Company extends React.Component {
-  setColor(progress) {
+
+  setColor(progress) { //Добавление CSS класса к доставке
     progress = Number(progress);
-    if (progress > 50) {
+    if (progress > 50) { 
       return "green";
     } else if (progress !== 0) {
       return "yellow";
@@ -17,13 +20,13 @@ class Company extends React.Component {
     return "";
   }
 
-  delete = () => {
+  delete = () => { // Удалить поставщика
     this.setState({ show: false });
   };
 
   state = { compnay_class: "", changed: {}, saved: [], show: true };
 
-  toggle(statement) {
+  toggle(statement) { //Скрыть / Показать больше
     console.log(statement);
     if (statement) {
       this.setState({ compnay_class: "active" });
@@ -33,8 +36,8 @@ class Company extends React.Component {
     return false;
   }
 
-  getData(e) {
-    let object = {
+  getData(e) { //Получение данных из формы
+    let object = { // Приведение данных к виду компонента
       status: e.values.status,
       date: e.values.date,
       tracking: e.values.tracking,
@@ -65,7 +68,7 @@ class Company extends React.Component {
     this.state.changed = object;
   }
 
-  saveData() {
+  saveData() { //Добавить компонент
     this.setState((prevState) => ({
       saved: [...prevState.saved, <DeliveryStatus data={this.state.changed} />],
     }));

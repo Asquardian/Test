@@ -8,7 +8,7 @@ class CompanyDetail extends React.Component {
     status: "В пути", 
     agree: "Деловые линии", 
     company: "Деловые линии", 
-    date: "",
+    date: "01.01.2024",
     weight: {
       number: 0,
       select: "g"
@@ -30,7 +30,7 @@ class CompanyDetail extends React.Component {
       select: "mm"
     },
     url: "",
-    place: "",
+    sit: 0,
     tracking: "",
     company: ""
   }
