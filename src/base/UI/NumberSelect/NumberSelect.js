@@ -11,8 +11,10 @@ class NumberSelect extends React.Component {
     return result;
   }
 
-  handleChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value });
+  async handleInputChange (event) {
+    await this.setState({ [event.target.name]: event.target.value });
+    console.log(this.state);
+    this.props.onChange(this.state, this.props.name);
   };
 
   constructor(props) {
@@ -29,13 +31,14 @@ class NumberSelect extends React.Component {
           name="number"
           min={0}
           value={this.state.number}
-          onChange={this.handleChange}
+          onChange={(event) => this.handleInputChange(event)}
+          required
         />
         <select
           className="input"
           name="select"
           id=""
-          onChange={this.handleChange}
+          onChange={(event) => this.handleInputChange(event)}
         >
           {this.printOption()}
         </select>

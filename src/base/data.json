@@ -14,10 +14,11 @@
       "product": [
         {
           "img": "/img/product.jpg",
-          "name": "text",
-          "id": 0,
+          "name": "Токарный станок",
+          "id": 1,
           "price": 10000000000,
-          "left": 10
+          "left": 10,
+          "type": "Z-MaT I F200.1"
         }
       ],
       "delivery": [
@@ -26,9 +27,24 @@
           "status": "Доставлен",
           "date": "12.02.2023",
           "tracking": "3485638756",
-          "width": "90x90x90 mm",
-          "weight": "100 kg",
-          "status_paid": "Оплачена"
+          "url": "https://react.dev",
+          "width": [
+            {
+              "number": 90,
+              "select": "mm"
+            },
+            {
+              "number": 90,
+              "select": "mm"
+            },
+            {
+              "number": 90,
+              "select": "mm"
+            }
+          ],
+          "weight": { "number": 100, "select": "kg" },
+          "status_paid": "Оплачена",
+          "place": 5
         },
 
         {
@@ -36,9 +52,24 @@
           "status": "В пути",
           "date": "12.02.2023",
           "tracking": "3485638756",
-          "width": "90x90x90 mm",
-          "weight": "100 kg",
-          "status_paid": "Оплачена"
+          "url": "https://react.dev",
+          "width": [
+            {
+              "number": 90,
+              "select": "mm"
+            },
+            {
+              "number": 90,
+              "select": "mm"
+            },
+            {
+              "number": 90,
+              "select": "mm"
+            }
+          ],
+          "weight": { "number": 100, "select": "kg" },
+          "status_paid": "Оплачена",
+          "place": 5
         }
       ]
     },
@@ -51,15 +82,27 @@
         "price": 12000000000,
         "shipping": 12000000000,
         "remain": 0,
-        "progress": 100
+        "progress": 100,
+        "inBalance": 0
       },
       "product": [
         {
           "img": "/img/product.jpg",
-          "name": "text1",
-          "id": 1,
+          "name": "Токарный станок",
+          "id": 0,
           "price": 10000000000,
-          "left": 10
+          "left": 10,
+          "type": "Z-MaT I F200.1",
+          "inBalance": 0
+        },
+
+        {
+          "img": "/img/product.jpg",
+          "name": "Токарный станок1",
+          "id": 1,
+          "price": 100000000,
+          "left": 10,
+          "type": "Z-MaT I F200.11"
         }
       ],
       "delivery": [
@@ -68,9 +111,24 @@
           "status": "Доставлен",
           "date": "12.02.2024",
           "tracking": "3485638756",
-          "width": "90x90x90 mm",
-          "weight": "100 kg",
-          "status_paid": "Оплачена"
+          "url": "https://react.dev",
+          "width": [
+            {
+              "number": 90,
+              "select": "mm"
+            },
+            {
+              "number": 90,
+              "select": "mm"
+            },
+            {
+              "number": 90,
+              "select": "mm"
+            }
+          ],
+          "weight": { "number": 100, "select": "kg" },
+          "status_paid": "Оплачена",
+          "place": 5
         },
 
         {
@@ -78,9 +136,24 @@
           "status": "В пути",
           "date": "12.02.2024",
           "tracking": "3485638756",
-          "width": "90x90x90 mm",
-          "weight": "100 kg",
-          "status_paid": "Оплачена"
+          "url": "https://react.dev",
+          "width": [
+            {
+              "number": 90,
+              "select": "mm"
+            },
+            {
+              "number": 90,
+              "select": "mm"
+            },
+            {
+              "number": 90,
+              "select": "km"
+            }
+          ],
+          "weight": { "number": 100, "select": "kg" },
+          "status_paid": "Оплачена",
+          "place": 5
         }
       ]
     }

@@ -1,17 +1,44 @@
 import "./delivery_save.css";
 import React from "react";
-import Product from '../Product/Product'
+import Product from "../Product/Product";
 
 class DeliverySave extends React.Component {
+  state = { product: [], data: {}};
 
-  state = { product: [] };
+  async getItem(value, balance, id) {
+    this.state.data[id] = {
+      inBalance: balance,
+      price: value.price,
+      left: value.left
+    };
+    this.props.getData(this.state.data);
+  }
 
-  componentWillMount(){
-    this.props.product.forEach(data => {
-      this.setState( 
-        { product: [...this.state.product, <Product data={data} key={data.id}/>] }
-      );
+  async componentWillMount() {
+    await this.props.product.forEach((data) => {
+      this.setState((prevState) => ({
+        product: [
+          ...prevState.product,
+          <Product
+            value={data}
+            name={data.id}
+            key={data.id}
+            getData={(value, balance) =>
+              this.getItem(value, balance, data.id)
+            }
+          />,
+        ],
+        data: {
+          ...prevState.data,
+          [data.id]: {
+            inBalance: 0,
+            price: data.price,
+            left: data.left,
+          }
+        }
+      }));
     });
+    this.props.getData(this.state.data);
   }
 
   render() {

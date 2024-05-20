@@ -33,7 +33,6 @@ class DeliveryApp extends React.Component {
           <DeliveryStatus data={item_delivery} key={item_delivery.id} />
         );
       }
-      console.log(item.product);
       companyList.push(<Company data={item.info} key={item.id} product={item.product}> 
         {deliveryList} 
       </Company>);

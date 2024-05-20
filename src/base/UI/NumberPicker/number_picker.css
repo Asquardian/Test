@@ -1,0 +1,16 @@
+.number_control{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    border: 1px solid rgba(228, 228, 228, 1);
+    border-radius: 5px;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+}
+
+.number_control button{
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}

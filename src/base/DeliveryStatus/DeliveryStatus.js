@@ -17,6 +17,42 @@ class DeliveryStatus extends React.Component {
     return state;
   }
 
+  widthScale(value){
+    let total = "";
+    value.forEach((element, idx, array) => {
+      total += element.number + element.select;
+      if(idx < array.length - 1){
+        total += " x ";
+      }
+    })
+    return total;
+  }
+
+  width(value){
+    let unit = "";
+    let total = "";
+    if(!value){
+      return "Не указано"
+    }
+    value.forEach((element, idx, array) => {
+      if(unit === ""){
+        unit = element.select;
+      }
+      total += element.number;
+      if(unit != element.select){
+        return total = this.widthScale(value);
+      }
+      if(idx === array.length - 1){
+        total += " " + element.select;
+      }
+      else{
+        console.log(array.length);
+        total += "x";
+      }
+    })
+    return total;
+  }
+
   render() {
     return (
       <div className="delivery_row">
@@ -28,21 +64,21 @@ class DeliveryStatus extends React.Component {
         <div className="delivery_date">{this.props.data.date}</div>
         <div className="delivery_tracking">
           <div className="delivery_item_label">Трекинг номер</div>
-          <a className="delivery_item_value" href="34856387564">
-            34856387564
+          <a className="delivery_item_value" href={this.props.data.url}>
+          {this.props.data.tracking}
           </a>
         </div>
         <div className="delivery_width">
           <div className="delivery_item_label">Габариты</div>
-          <div className="delivery_item_value">90х90х90 mm</div>
+          <div className="delivery_item_value">{this.width(this.props.data.width)}</div>
         </div>
         <div className="delivery_weight">
           <div className="delivery_item_label">Общий вес</div>
-          <div className="delivery_item_value">100 kg</div>
+          <div className="delivery_item_value">{this.props.data.weight.number + " " + this.props.data.weight.select}</div>
         </div>
         <div className="delivery_number_place">
           <div className="delivery_item_label">Кол-во мест</div>
-          <div className="delivery_item_value">5</div>
+          <div className="delivery_item_value">{this.props.data.place}</div>
         </div>
         <div className="delivery_status_paid">
           <div className="delivery_item_label">Оплата доставки</div>

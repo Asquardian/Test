@@ -43,6 +43,31 @@
   font-size: 14px;
 }
 
+.save{
+    font-family: "Manrope", sans-serif;
+    padding: 12px 20px 10px 20px;
+    border-radius: 5px;
+    background-color: rgba(242, 86, 39, 1);
+    color: white;
+    outline: none;
+    border: none
+}
+
+.button_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 20%;
+    margin-top: 53px
+}
+
+.delete{
+    font-family: "Manrope", sans-serif;
+    background-color: unset;
+    color: rgba(242, 86, 39, 1);
+    outline: none;
+    border: none
+}
+
 .company_city {
   color: #8e8e8e;
 }

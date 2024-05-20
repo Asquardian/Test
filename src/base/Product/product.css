@@ -1,0 +1,32 @@
+.product{
+    display: grid;
+    grid-template-columns: 2fr repeat(4, 1fr);
+    align-items: center;
+    border: 1px solid rgba(239, 240, 244, 1);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.product .item_save{
+    
+    text-align: center;
+}
+
+.item_main{
+    display: flex;
+    align-items: center;
+}
+
+.item_name{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.item_name_type{
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+    color: rgba(142, 142, 142, 1);
+}
